@@ -46,7 +46,7 @@ ps <- dat %>%
 ```{r summary}
 tab <- ps %>% group_by(University) %>% 
   summarize(Total = sum(CBKAAT[AWLEVEL == 17], na.rm=TRUE),
-            Pct = sum(CBKAAT[AWLEVEL == 17], na.rm=TRUE)/
+            Share = sum(CBKAAT[AWLEVEL == 17], na.rm=TRUE)/
               sum(CTOTALT[AWLEVEL == 17], na.rm=TRUE))
 ```
 
@@ -54,7 +54,7 @@ tab <- ps %>% group_by(University) %>%
 # Undegrads
 # ps %>% group_by(University) %>% 
 #   summarize(Total = sum(CBKAAT[AWLEVEL == "05"], na.rm=TRUE),
-#             Pct = sum(CBKAAT[AWLEVEL == "05"], na.rm=TRUE)/
+#             Share = sum(CBKAAT[AWLEVEL == "05"], na.rm=TRUE)/
 #               sum(CTOTALT[AWLEVEL == "05"], na.rm=TRUE))
 
 # ps %>% select(CBKAAT, UNITID)
